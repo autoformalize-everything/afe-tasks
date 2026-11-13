@@ -1,0 +1,18 @@
+# bzip2, vendored in afe-oss under projects/bzip2/upstream (see projects/bzip2/README.md there)
+repo = "autoformalize-everything/afe-oss"
+base = "master"
+image = "afe-c-agent:pilot"   # built from afe-oss images/c-agent; not yet in a registry
+
+prompt = """
+This repository holds several projects. This task is about bzip2: everything is under
+projects/bzip2/. projects/bzip2/upstream/ is the vendored upstream source and must not be
+modified; neither must projects/bzip2/tools/. Write only where the task says.
+"""
+
+review_prompt = """
+This is documentation of bzip2's behaviour. Check claims against the source in
+projects/bzip2/upstream/, not against your memory of bzip2: spot-check at least five non-obvious
+claims (return codes, preconditions, parameter ranges) by reading the cited lines. Ask for
+changes if any claim is wrong, uncited where it should be cited, speculative without saying so,
+or if anything outside projects/bzip2/docs/ was changed.
+"""

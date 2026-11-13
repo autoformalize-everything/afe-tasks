@@ -1,0 +1,26 @@
+# afe fleet: coordination settings (docs: https://github.com/autoformalize-everything/afe-fleet)
+#
+#   afe-fleet worker run autoformalize-everything/afe-tasks
+#   afe-fleet admin run autoformalize-everything/afe-tasks
+
+[fleet]
+name = "afe"
+# version = "0.1.0"   # pin once afe-fleet has a release tag; tool-installed workers then self-update
+# source = "git+https://github.com/autoformalize-everything/afe-fleet"
+
+[coord]
+mode = "github"
+lock_repo = "autoformalize-everything/fleet-coord"   # task-lock/<task-id> branches; nothing else
+# tasks_repo defaults to this repository
+
+[lease]
+heartbeat = "5m"
+ttl = "20m"
+
+[access]
+write_request = "off"   # "auto" | "approve" | "off": grant fleet-coord write via issues
+
+[admin]
+done_grace = "1h"
+poll = "20s"
+ci_timeout = "3h"

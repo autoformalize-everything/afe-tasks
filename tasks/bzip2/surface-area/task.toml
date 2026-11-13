@@ -1,0 +1,4 @@
+kinds = ["work", "review"]
+priority = 10
+# derives the required inventory from the source; also rejects changes outside projects/bzip2/docs/
+verify = ["python3", "projects/bzip2/tools/check_surface.py", "--only-docs"]
