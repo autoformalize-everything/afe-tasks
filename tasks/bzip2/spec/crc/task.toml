@@ -1,1 +1,2 @@
 priority = 90
+paths = ["projects/bzip2/spec/Bzip2/Spec/Crc.lean", "projects/bzip2/spec/Bzip2/Spec/Crc/*"]

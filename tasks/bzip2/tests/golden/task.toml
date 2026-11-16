@@ -1,1 +1,2 @@
 priority = 86
+paths = ["projects/bzip2/tests/Bzip2/Tests.lean", "projects/bzip2/tests/vectors/*"]

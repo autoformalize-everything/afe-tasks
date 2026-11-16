@@ -13,21 +13,29 @@ prepare = ["sh", "projects/bzip2/tools/use-image-packages.sh"]
 prompt = """
 This repository holds several projects. This task is about bzip2: everything is under
 projects/bzip2/. projects/bzip2/upstream/ is the vendored upstream source and must not be
-modified; neither must projects/bzip2/tools/. Write only where the task says. For the Lean
-formalization (spec/, oracle/, proofs/, fuzz/, tests/), read "The Lean formalization" in
-projects/bzip2/README.md before anything else; the C sources in upstream/ decide every unclear
-detail. Report anything outside your task's scope under followups.
+modified; neither must projects/bzip2/tools/ or projects/bzip2/checks/. Write only where the
+task says.
+
+For the Lean formalization (spec/, oracle/, proofs/, fuzz/, tests/): read "The Lean
+formalization" in projects/bzip2/README.md and projects/bzip2/STYLE.md before anything else, and
+hold your change to them. The C sources in upstream/ decide every unclear detail; cite them as
+`file.c:LINE` after reading the lines. projects/bzip2/tools/verify.sh runs in named stages and
+you can rerun one (`verify.sh build style`); lean and lake are on the PATH. Report anything
+outside your task's scope under followups instead of doing it.
 """
 
 review_prompt = """
 Check the change against its task and against bzip2's behaviour as the source in
 projects/bzip2/upstream/ defines it, not against your memory of bzip2: spot-check at least five
 non-obvious claims or behaviours (return codes, error cases, limits, bit layouts) by reading the
-cited lines or running the code. Ask for changes if any claim is wrong, uncited where it should
-be cited, speculative without saying so, or if the change touches projects/bzip2/upstream/,
-projects/bzip2/tools/, or anything else the task does not allow. For the Lean formalization also
-check the rules in projects/bzip2/README.md: no sorry/admit/axiom, the oracle importing neither
-Mathlib nor the spec, the oracle's API changed only together with its users.
+cited lines or running the code.
+
+For the Lean formalization, the rules are projects/bzip2/STYLE.md and the task; hold the change
+to those and to nothing else. Run `projects/bzip2/tools/verify.sh` yourself (lean and lake are
+on the PATH) and, when the task names one, its `tools/check-task.sh` check; a failing stage is a
+reason for changes, and so is a wrong, missing or unread citation, a claim that does not match
+the C code, or a file changed outside the task's "Files". Matters of taste that STYLE.md does
+not settle are not.
 """
 
 # Default effort for this project's attempts and reviews; proof tasks raise it in their task.toml.

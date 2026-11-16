@@ -1,5 +1,7 @@
 priority = 60
 deps = ["bzip2/spec/crc", "bzip2/oracle/crc"]
+paths = ["projects/bzip2/proofs/Bzip2/Proofs/Crc.lean", "projects/bzip2/proofs/Bzip2/Proofs/Crc/*"]
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/tools/check-task.sh proofs/crc"]
 
 [agent.work]
 effort = "max"

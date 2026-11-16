@@ -1,2 +1,4 @@
 priority = 88
 deps = ["bzip2/spec/crc", "bzip2/spec/rle1", "bzip2/spec/bwt", "bzip2/spec/mtf-rle2", "bzip2/spec/huffman"]
+paths = ["projects/bzip2/spec/Bzip2/Spec/Format.lean", "projects/bzip2/spec/Bzip2/Spec/Format/*"]
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/tools/check-task.sh spec/format"]

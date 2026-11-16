@@ -1,2 +1,4 @@
 priority = 68
 deps = ["bzip2/oracle/bitio", "bzip2/oracle/compress/rle1-blocks", "bzip2/oracle/compress/bwt", "bzip2/oracle/compress/mtf-rle2", "bzip2/oracle/compress/huffman"]
+paths = ["projects/bzip2/oracle/Bzip2/Oracle/Compress.lean", "projects/bzip2/oracle/Bzip2/Oracle/Compress/Stream.lean", "projects/bzip2/oracle/Bzip2/Oracle/Compress/Stream/*", "projects/bzip2/tests/Bzip2/Test/CompressStream*.lean"]
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/tools/check-task.sh oracle/compress/stream"]

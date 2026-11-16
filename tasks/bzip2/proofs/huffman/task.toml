@@ -1,5 +1,7 @@
 priority = 58
 deps = ["bzip2/spec/huffman", "bzip2/oracle/decompress/huffman", "bzip2/oracle/compress/huffman"]
+paths = ["projects/bzip2/proofs/Bzip2/Proofs/Huffman.lean", "projects/bzip2/proofs/Bzip2/Proofs/Huffman/*"]
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/tools/check-task.sh proofs/huffman"]
 
 [agent.work]
 effort = "max"

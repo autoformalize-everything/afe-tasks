@@ -11,8 +11,13 @@ README):
 - **tests**: golden vectors from the vendored bzip2, run by `lake test`.
 
 Ground truth is the vendored source, `projects/bzip2/upstream` (f5dfc96: 1.0.8 plus later
-fixes). Every formalization task's verify is `projects/bzip2/tools/verify.sh` (Lake packages,
-`lake build` with no `sorry`, source rules, `lake test`); the fuzz tasks add a timed fuzzing run.
+fixes); the rules are `projects/bzip2/STYLE.md`. Every formalization task has:
+
+- `paths` in its `task.toml`: the files it may change (also listed in its `TASK.md`). The worker
+  fails an attempt that changes anything else. No two tasks share a file.
+- a verify of `projects/bzip2/tools/verify.sh` (stages `packages sources build style axioms lint
+  test`), plus `tools/check-task.sh <task>` where `projects/bzip2/checks/<task>.lean` states what
+  the task must provide, plus a timed fuzzing run for the fuzz tasks.
 
 ## Order
 
@@ -28,8 +33,8 @@ oracle/crc ───────────────────────
 oracle/crc ─► compress/rle1-blocks ─┐
 compress/{bwt,mtf-rle2,huffman} ────┼─► compress/stream ─► compress/byte-exact
 oracle/bitio ───────────────────────┘
-fuzz/ffi + decompress/stream ─► fuzz/decompress-diff
-fuzz/ffi + compress/stream + decompress/stream ─► fuzz/compress-diff
+fuzz/ffi + decompress/stream + tests/golden ─► fuzz/decompress-diff ─┐
+                                                 compress/stream ─────┴─► fuzz/compress-diff
 spec part + oracle part ─► proofs/{crc,rle,bwt,huffman} ─► proofs/{decompress,compress}
 ```
 

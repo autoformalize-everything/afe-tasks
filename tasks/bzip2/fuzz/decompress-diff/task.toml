@@ -1,3 +1,4 @@
 priority = 62
-deps = ["bzip2/fuzz/ffi", "bzip2/oracle/decompress/stream"]
+deps = ["bzip2/fuzz/ffi", "bzip2/oracle/decompress/stream", "bzip2/tests/golden"]
+paths = ["projects/bzip2/fuzz/*", "projects/bzip2/oracle/Bzip2/Oracle/Decompress.lean", "projects/bzip2/oracle/Bzip2/Oracle/Decompress/*", "projects/bzip2/tests/vectors/*"]
 verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/fuzz/run.sh decompress 120"]

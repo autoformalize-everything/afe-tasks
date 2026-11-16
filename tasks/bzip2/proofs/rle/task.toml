@@ -1,5 +1,7 @@
 priority = 58
 deps = ["bzip2/spec/rle1", "bzip2/spec/mtf-rle2", "bzip2/oracle/decompress/block-output", "bzip2/oracle/compress/rle1-blocks", "bzip2/oracle/compress/mtf-rle2"]
+paths = ["projects/bzip2/proofs/Bzip2/Proofs/Rle.lean", "projects/bzip2/proofs/Bzip2/Proofs/Rle/*"]
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/tools/check-task.sh proofs/rle"]
 
 [agent.work]
 effort = "max"

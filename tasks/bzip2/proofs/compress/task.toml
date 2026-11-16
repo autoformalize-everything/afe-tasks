@@ -1,5 +1,7 @@
 priority = 55
 deps = ["bzip2/spec/format", "bzip2/oracle/compress/stream", "bzip2/proofs/crc", "bzip2/proofs/rle", "bzip2/proofs/bwt", "bzip2/proofs/huffman"]
+paths = ["projects/bzip2/proofs/Bzip2/Proofs/Compress.lean", "projects/bzip2/proofs/Bzip2/Proofs/Compress/*"]
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/tools/check-task.sh proofs/compress"]
 
 [agent.work]
 effort = "max"

@@ -1,1 +1,2 @@
 priority = 70
+paths = ["projects/bzip2/oracle/Bzip2/Oracle/Compress/Mtf.lean", "projects/bzip2/oracle/Bzip2/Oracle/Compress/Mtf/*", "projects/bzip2/tests/Bzip2/Test/CompressMtf*.lean", "projects/bzip2/tests/vectors/compress-mtf/*"]
