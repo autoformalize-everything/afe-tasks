@@ -1,0 +1,33 @@
+{
+  "at": 1794872268.1707187,
+  "lock_tip": "cdf6984f4be61c3d0a9d2ff15ceddb9bb6a30671",
+  "status": {
+    "author": "imlvts/corey-codex",
+    "epoch": 3,
+    "last": {
+      "at": "2026-11-16T23:37:15Z",
+      "by": "admin",
+      "epoch": 3,
+      "merged_sha": "3302d90fad2213279bfd4e6f8823578935d6d1cf",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/compress/mtf-rle2/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "3302d90fad2213279bfd4e6f8823578935d6d1cf",
+      "number": 12,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "be04669dbe0433e8",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/12"
+    },
+    "rounds": 0,
+    "strikes": 0,
+    "task": "bzip2/oracle/compress/mtf-rle2",
+    "v": 1
+  },
+  "task": "bzip2/oracle/compress/mtf-rle2"
+}
