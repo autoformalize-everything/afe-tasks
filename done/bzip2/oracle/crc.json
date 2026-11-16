@@ -1,0 +1,33 @@
+{
+  "at": 1794871789.1876829,
+  "lock_tip": "02e81cf7134f331c178663c3a8651a76a31a5b7e",
+  "status": {
+    "author": "imlvts/corey-claude",
+    "epoch": 6,
+    "last": {
+      "at": "2026-11-16T23:29:17Z",
+      "by": "admin",
+      "epoch": 6,
+      "merged_sha": "9817dd7eb28f551bd790aaea7dbb78118f761d10",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/crc/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "9817dd7eb28f551bd790aaea7dbb78118f761d10",
+      "number": 8,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "02722e89e4b84ef8",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/8"
+    },
+    "rounds": 1,
+    "strikes": 0,
+    "task": "bzip2/oracle/crc",
+    "v": 1
+  },
+  "task": "bzip2/oracle/crc"
+}
