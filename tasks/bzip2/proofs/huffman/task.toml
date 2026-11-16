@@ -1,0 +1,5 @@
+priority = 58
+deps = ["bzip2/spec/huffman", "bzip2/oracle/decompress/huffman", "bzip2/oracle/compress/huffman"]
+
+[agent.work]
+effort = "max"

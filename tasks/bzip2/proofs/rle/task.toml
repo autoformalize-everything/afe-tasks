@@ -1,0 +1,5 @@
+priority = 58
+deps = ["bzip2/spec/rle1", "bzip2/spec/mtf-rle2", "bzip2/oracle/decompress/block-output", "bzip2/oracle/compress/rle1-blocks", "bzip2/oracle/compress/mtf-rle2"]
+
+[agent.work]
+effort = "max"

@@ -1,0 +1,2 @@
+priority = 40
+deps = ["bzip2/oracle/compress/stream"]

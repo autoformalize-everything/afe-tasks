@@ -1,0 +1,2 @@
+priority = 74
+deps = ["bzip2/oracle/decompress/block-data", "bzip2/oracle/crc"]

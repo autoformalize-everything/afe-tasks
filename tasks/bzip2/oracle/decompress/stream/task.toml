@@ -1,0 +1,2 @@
+priority = 72
+deps = ["bzip2/oracle/decompress/block-output"]

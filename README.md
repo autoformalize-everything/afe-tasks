@@ -24,3 +24,4 @@ PRs to the project's repository, e.g. [afe-oss](https://github.com/autoformalize
 | Task | Project | What |
 |---|---|---|
 | [`bzip2/surface-area`](tasks/bzip2/surface-area/TASK.md) | bzip2 | Document everything outside code can touch in bzip2 |
+| [`bzip2/{spec,oracle,proofs,fuzz,tests}/…`](tasks/bzip2/README.md) (29) | bzip2 | Lean formalization: spec, executable oracle, proofs, differential fuzzer |

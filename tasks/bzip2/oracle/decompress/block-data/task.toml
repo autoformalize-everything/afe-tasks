@@ -1,0 +1,2 @@
+priority = 76
+deps = ["bzip2/oracle/decompress/block-header"]

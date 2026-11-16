@@ -1,0 +1,2 @@
+priority = 65
+verify = ["sh", "-c", "projects/bzip2/tools/verify.sh && projects/bzip2/fuzz/build.sh && projects/bzip2/fuzz/build/ffi_smoke"]

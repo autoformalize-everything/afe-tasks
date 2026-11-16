@@ -1,0 +1,5 @@
+priority = 60
+deps = ["bzip2/spec/crc", "bzip2/oracle/crc"]
+
+[agent.work]
+effort = "max"

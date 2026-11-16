@@ -1,18 +1,31 @@
 # bzip2, vendored in afe-oss under projects/bzip2/upstream (see projects/bzip2/README.md there)
 repo = "autoformalize-everything/afe-oss"
 base = "master"
-image = "afe-c-agent:pilot"   # built from afe-oss images/c-agent; not yet in a registry
+# built from afe-oss images/bzip2-lean; not yet in a registry. Lean (with Mathlib's build), clang
+# with libFuzzer and a C toolchain; for afe-fleet's container runtime.
+image = "afe-bzip2-lean:dev"
+# what the Lean formalization tasks must leave passing; a task's own verify replaces it
+verify = ["sh", "projects/bzip2/tools/verify.sh"]
+# before the agent, where its tools run: link the image's prebuilt Lake packages (Mathlib
+# included) instead of cloning and unpacking ~7 GB per attempt
+prepare = ["sh", "projects/bzip2/tools/use-image-packages.sh"]
 
 prompt = """
 This repository holds several projects. This task is about bzip2: everything is under
 projects/bzip2/. projects/bzip2/upstream/ is the vendored upstream source and must not be
-modified; neither must projects/bzip2/tools/. Write only where the task says.
+modified; neither must projects/bzip2/tools/. Write only where the task says. For the Lean
+formalization (spec/, oracle/, proofs/, fuzz/, tests/), read "The Lean formalization" in
+projects/bzip2/README.md before anything else; the C sources in upstream/ decide every unclear
+detail. Report anything outside your task's scope under followups.
 """
 
 review_prompt = """
-This is documentation of bzip2's behaviour. Check claims against the source in
-projects/bzip2/upstream/, not against your memory of bzip2: spot-check at least five non-obvious
-claims (return codes, preconditions, parameter ranges) by reading the cited lines. Ask for
-changes if any claim is wrong, uncited where it should be cited, speculative without saying so,
-or if anything outside projects/bzip2/docs/ was changed.
+Check the change against its task and against bzip2's behaviour as the source in
+projects/bzip2/upstream/ defines it, not against your memory of bzip2: spot-check at least five
+non-obvious claims or behaviours (return codes, error cases, limits, bit layouts) by reading the
+cited lines or running the code. Ask for changes if any claim is wrong, uncited where it should
+be cited, speculative without saying so, or if the change touches projects/bzip2/upstream/,
+projects/bzip2/tools/, or anything else the task does not allow. For the Lean formalization also
+check the rules in projects/bzip2/README.md: no sorry/admit/axiom, the oracle importing neither
+Mathlib nor the spec, the oracle's API changed only together with its users.
 """

@@ -1,0 +1,2 @@
+priority = 68
+deps = ["bzip2/oracle/bitio", "bzip2/oracle/compress/rle1-blocks", "bzip2/oracle/compress/bwt", "bzip2/oracle/compress/mtf-rle2", "bzip2/oracle/compress/huffman"]

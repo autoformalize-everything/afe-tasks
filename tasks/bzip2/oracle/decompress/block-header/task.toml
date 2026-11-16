@@ -1,0 +1,2 @@
+priority = 78
+deps = ["bzip2/oracle/bitio", "bzip2/oracle/decompress/huffman"]
