@@ -29,3 +29,7 @@ projects/bzip2/tools/, or anything else the task does not allow. For the Lean fo
 check the rules in projects/bzip2/README.md: no sorry/admit/axiom, the oracle importing neither
 Mathlib nor the spec, the oracle's API changed only together with its users.
 """
+
+# Default effort for this project's attempts and reviews; proof tasks raise it in their task.toml.
+[agent]
+effort = "high"
