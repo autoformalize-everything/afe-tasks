@@ -1,0 +1,33 @@
+{
+  "at": 1794873006.8618028,
+  "lock_tip": "df5766bc4db1548065e5ea692957685ab263a09d",
+  "status": {
+    "author": "imlvts/corey-claude",
+    "epoch": 7,
+    "last": {
+      "at": "2026-11-16T23:49:35Z",
+      "by": "admin",
+      "epoch": 7,
+      "merged_sha": "d9891b0ce1fd8d151456e3996fafc0c4af00e902",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/compress/huffman/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "d9891b0ce1fd8d151456e3996fafc0c4af00e902",
+      "number": 13,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "0fb30a091183b2ad",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/13"
+    },
+    "rounds": 2,
+    "strikes": 0,
+    "task": "bzip2/oracle/compress/huffman",
+    "v": 1
+  },
+  "task": "bzip2/oracle/compress/huffman"
+}
