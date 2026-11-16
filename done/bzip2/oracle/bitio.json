@@ -1,0 +1,33 @@
+{
+  "at": 1794871683.2623777,
+  "lock_tip": "1261ac4f06e2862d5c87480cd4995324acf387fb",
+  "status": {
+    "author": "imlvts/corey-claude",
+    "epoch": 5,
+    "last": {
+      "at": "2026-11-16T23:27:30Z",
+      "by": "admin",
+      "epoch": 5,
+      "merged_sha": "7e087a4cd53147614176eb2b96fa0eb899e22bc3",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/bitio/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "7e087a4cd53147614176eb2b96fa0eb899e22bc3",
+      "number": 9,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "bcb5efb7a52b57db",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/9"
+    },
+    "rounds": 1,
+    "strikes": 0,
+    "task": "bzip2/oracle/bitio",
+    "v": 1
+  },
+  "task": "bzip2/oracle/bitio"
+}
