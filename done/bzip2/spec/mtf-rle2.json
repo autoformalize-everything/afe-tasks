@@ -1,0 +1,33 @@
+{
+  "at": 1794867444.6480358,
+  "lock_tip": "74e089540325c1248b18cca9e1ec1dc4403d0864",
+  "status": {
+    "author": "imlvts/corey-codex",
+    "epoch": 4,
+    "last": {
+      "at": "2026-11-16T22:16:57Z",
+      "by": "admin",
+      "epoch": 4,
+      "merged_sha": "20b28b855895d0eefac09f3b8676cf9ed8471a84",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/spec/mtf-rle2/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "20b28b855895d0eefac09f3b8676cf9ed8471a84",
+      "number": 3,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "ba0d22867f59c6ed",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/3"
+    },
+    "rounds": 1,
+    "strikes": 0,
+    "task": "bzip2/spec/mtf-rle2",
+    "v": 1
+  },
+  "task": "bzip2/spec/mtf-rle2"
+}
