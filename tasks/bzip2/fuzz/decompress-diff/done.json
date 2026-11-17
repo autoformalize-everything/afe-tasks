@@ -1,0 +1,33 @@
+{
+  "at": 1794885890.1970427,
+  "lock_tip": "bcb9705fca9d7d47fe15a7d83b90c4963dafdf9a",
+  "status": {
+    "author": "imlvts/corey-codex",
+    "epoch": 4,
+    "last": {
+      "at": "2026-11-17T03:24:23Z",
+      "by": "admin",
+      "epoch": 4,
+      "merged_sha": "4725b5661cec355ed32bd26fdf4db15d3b02ca5e",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/fuzz/decompress-diff/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "4725b5661cec355ed32bd26fdf4db15d3b02ca5e",
+      "number": 26,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "b6dc28567ac42694",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/26"
+    },
+    "rounds": 0,
+    "strikes": 0,
+    "task": "bzip2/fuzz/decompress-diff",
+    "v": 1
+  },
+  "task": "bzip2/fuzz/decompress-diff"
+}
