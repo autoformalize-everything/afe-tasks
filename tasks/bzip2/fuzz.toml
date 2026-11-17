@@ -1,0 +1,30 @@
+# Standing fuzz campaigns, run by `afe-fleet fuzz run autoformalize-everything/afe-tasks` with
+# no model (afe-fleet's src/afe_fleet/fuzz.py). Each round builds the harness on master in the
+# project's image, reruns the open findings, fuzzes, and commits every new kind of failure to
+# tasks/bzip2/fuzz-findings/<campaign>/<hash>/ (input.bin, finding.json). At most `max_open` of
+# them are tasks at a time; the rest wait there, in the order found.
+#
+# This file is outside every task's directory: editing it changes no task's spec.
+
+[[campaign]]
+name = "decompress"
+build = ["sh", "projects/bzip2/fuzz/build.sh"]
+target = "projects/bzip2/fuzz/build/decompress_diff"
+seeds = ["projects/bzip2/fuzz/corpus/seed"]
+flags = ["-timeout=60"]
+every = "30m"
+minutes = 10
+jobs = 8
+max_open = 3
+priority = 70
+paths = ["projects/bzip2/oracle/Bzip2/Oracle/*", "projects/bzip2/tests/vectors/*",
+         "projects/bzip2/tests/Bzip2/Test/*"]
+fix = """
+The harness found an input on which libbz2 and the oracle disagree. libbz2 (projects/bzip2/upstream)
+is the reference: read the lines that decide this input and cite them. Fix the oracle so it agrees,
+then add input.bin to the golden vectors with libbz2's verdict and output, as
+projects/bzip2/tests/vectors/README.md describes, so `lake test` keeps it fixed. If upstream's
+behaviour itself looks wrong, keep the oracle faithful to it and say so in your result's debug."""
+
+# A "compress" campaign joins when bzip2/fuzz/compress-diff is done (its harness prints AFE-FUZZ
+# lines too): the same shape, target "projects/bzip2/fuzz/build/compress_diff".

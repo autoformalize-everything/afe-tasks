@@ -11,19 +11,25 @@ and with the oracle, and aborts unless:
 
 `projects/bzip2/fuzz/run.sh compress SECONDS` runs it as for decompression.
 
+- Before it aborts, the harness prints one line to stderr naming the failure in words that do not
+  depend on the input (no sizes, offsets or counts), e.g. `AFE-FUZZ: libbz2 rejects the oracle's
+  output (<verdict>)`, `AFE-FUZZ: oracle rejects libbz2's output (<verdict>)`,
+  `AFE-FUZZ: roundtrip differs`, `AFE-FUZZ: compressed bytes differ`. The fuzz runner
+  (`afe-fleet fuzz run`) groups what it finds by this line.
+- Fixing what it finds is not this task's job: the fuzz runner runs the campaign on `master` and
+  files each kind of failure as its own task. Report what you saw while building it under
+  followups.
+
 ## Done when
 
-- `projects/bzip2/fuzz/run.sh compress 120` finds nothing with the roundtrip checks (the task's verify
-  runs it).
+- The harness builds and passes on every input in `projects/bzip2/fuzz/corpus/seed/`:
+  `projects/bzip2/fuzz/run.sh compress 60 -runs=0` exits 0 (the task's verify runs it).
 
 ## Files
 
 This task may add and change only (`*` crosses directories):
 
 - `projects/bzip2/fuzz/*`
-- `projects/bzip2/oracle/Bzip2/Oracle/Compress.lean`
-- `projects/bzip2/oracle/Bzip2/Oracle/Compress/*`
-- `projects/bzip2/tests/vectors/*`
 
 ## Ground rules
 

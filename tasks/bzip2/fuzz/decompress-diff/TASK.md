@@ -9,13 +9,21 @@ input bytes consumed.
 - `projects/bzip2/fuzz/run.sh decompress SECONDS` builds if needed and runs it on
   `projects/bzip2/fuzz/corpus/decompress/`, seeded from `projects/bzip2/fuzz/corpus/seed/` (commit a small seed
   set: the upstream samples and a few hand-made streams).
-- Every disagreement found while doing this is either an oracle bug (fix it here, add the input
-  to the golden tests) or a spec question (file a followup for `bzip2/spec/*`).
+- Before it aborts, the harness prints one line to stderr naming the disagreement in words that
+  do not depend on the input (no sizes, offsets or counts): `AFE-FUZZ: verdict libbz2=<v>
+  oracle=<v>`, `AFE-FUZZ: output length differs`, `AFE-FUZZ: output differs`,
+  `AFE-FUZZ: consumed differs`, `AFE-FUZZ: unexpected status <name>`. The fuzz runner
+  (`afe-fleet fuzz run`) groups what it finds by this line.
+- Fixing disagreements is not this task's job: the fuzz runner runs the campaign on `master`
+  and files each kind it finds as its own task, under `tasks/bzip2/fuzz-findings/decompress/`.
+  Fixes already on this task's branch may stay.
 
 ## Done when
 
-- `projects/bzip2/fuzz/run.sh decompress 120` finds nothing (the task's verify runs it); document in
-  `projects/bzip2/fuzz/README.md` how to run longer campaigns and minimise a crash.
+- The harness builds and agrees on every input in `projects/bzip2/fuzz/corpus/seed/`:
+  `projects/bzip2/fuzz/run.sh decompress 60 -runs=0` exits 0 (the task's verify runs it).
+- `projects/bzip2/fuzz/README.md` says how to run a campaign by hand and minimise a crash, and
+  that the standing campaign is `tasks/bzip2/fuzz.toml`'s, run by `afe-fleet fuzz run`.
 
 ## Files
 
