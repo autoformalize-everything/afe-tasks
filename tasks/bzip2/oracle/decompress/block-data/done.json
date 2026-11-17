@@ -1,0 +1,33 @@
+{
+  "at": 1794881149.2506664,
+  "lock_tip": "ae8329321784c3900e558fb5dfeb0ec6e3e42725",
+  "status": {
+    "author": "imlvts/corey-claude",
+    "epoch": 2,
+    "last": {
+      "at": "2026-11-17T02:05:18Z",
+      "by": "admin",
+      "epoch": 2,
+      "merged_sha": "c63d5142dce967dc1d0f649f4a47929bce5982f7",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/decompress/block-data/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "c63d5142dce967dc1d0f649f4a47929bce5982f7",
+      "number": 18,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "6f7a904bf783b125",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/18"
+    },
+    "rounds": 0,
+    "strikes": 0,
+    "task": "bzip2/oracle/decompress/block-data",
+    "v": 1
+  },
+  "task": "bzip2/oracle/decompress/block-data"
+}
