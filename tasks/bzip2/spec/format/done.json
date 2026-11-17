@@ -1,0 +1,33 @@
+{
+  "at": 1794883182.352027,
+  "lock_tip": "7bd0930a590cb0398c8b9de090724f1e9a0e034a",
+  "status": {
+    "author": "imlvts/corey-opus",
+    "epoch": 6,
+    "last": {
+      "at": "2026-11-17T02:39:08Z",
+      "by": "admin",
+      "epoch": 6,
+      "merged_sha": "b84273274bac950e1eae6c3a289887ce0aebd0c9",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/spec/format/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "b84273274bac950e1eae6c3a289887ce0aebd0c9",
+      "number": 20,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "7d4f5a36342ee71f",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/20"
+    },
+    "rounds": 2,
+    "strikes": 0,
+    "task": "bzip2/spec/format",
+    "v": 1
+  },
+  "task": "bzip2/spec/format"
+}
