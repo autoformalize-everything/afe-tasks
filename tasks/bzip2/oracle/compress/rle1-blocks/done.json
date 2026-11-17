@@ -1,0 +1,33 @@
+{
+  "at": 1794881268.753084,
+  "lock_tip": "1421f05a53c6b7f398ea28b0f007e43d24a172a1",
+  "status": {
+    "author": "imlvts/corey-claude",
+    "epoch": 6,
+    "last": {
+      "at": "2026-11-17T02:07:21Z",
+      "by": "admin",
+      "epoch": 6,
+      "merged_sha": "9d0277ca9bdd69126f3c806e93c070399b2889e9",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/compress/rle1-blocks/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "9d0277ca9bdd69126f3c806e93c070399b2889e9",
+      "number": 16,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "148307c7db1ce57d",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/16"
+    },
+    "rounds": 2,
+    "strikes": 0,
+    "task": "bzip2/oracle/compress/rle1-blocks",
+    "v": 1
+  },
+  "task": "bzip2/oracle/compress/rle1-blocks"
+}
