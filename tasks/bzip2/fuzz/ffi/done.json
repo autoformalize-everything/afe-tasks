@@ -1,0 +1,33 @@
+{
+  "at": 1794877157.3468785,
+  "lock_tip": "06ebafe3bcc0864fbb569b622b64bdbf88600967",
+  "status": {
+    "author": "imlvts/corey-codex",
+    "epoch": 2,
+    "last": {
+      "at": "2026-11-17T00:58:46Z",
+      "by": "admin",
+      "epoch": 2,
+      "merged_sha": "f976589f271384a5a6d0a9ab9e5c53a1822b4b09",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/fuzz/ffi/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "f976589f271384a5a6d0a9ab9e5c53a1822b4b09",
+      "number": 17,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "b12f6ddedbad9e1d",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/17"
+    },
+    "rounds": 0,
+    "strikes": 0,
+    "task": "bzip2/fuzz/ffi",
+    "v": 1
+  },
+  "task": "bzip2/fuzz/ffi"
+}
