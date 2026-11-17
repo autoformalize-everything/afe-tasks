@@ -8,8 +8,9 @@ fleet.toml                       coordination settings (lock repo, lease timings
 tasks/<project>/project.toml     the code repo, base branch, agent image, prompts for a project
 tasks/<task-id>/TASK.md          one task: what to do and what "done" means
 tasks/<task-id>/task.toml        optional: verify command, deps, kinds, priority
-done/<task-id>.json              written by the admin when a task is accepted
-cancelled/<task-id>.json         written by the admin when a task is cancelled
+tasks/<task-id>/done.json        written by the admin when a task is accepted
+tasks/<task-id>/cancelled.json   written by the admin when a task is cancelled (a task removed
+                                 from the tree keeps its directory with only this file)
 STATUS.md                        written by the admin; for humans
 ```
 
