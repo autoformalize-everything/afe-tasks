@@ -1,0 +1,33 @@
+{
+  "at": 1794876884.1860523,
+  "lock_tip": "bdb58e6e2d50281ddd8f0bb12ef80146b4d2e105",
+  "status": {
+    "author": "imlvts/corey-codex",
+    "epoch": 9,
+    "last": {
+      "at": "2026-11-17T00:54:13Z",
+      "by": "admin",
+      "epoch": 9,
+      "merged_sha": "7aef0e6ba7606ea3ccde054020a2c881a5d077a8",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/spec/huffman/e2",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "7aef0e6ba7606ea3ccde054020a2c881a5d077a8",
+      "number": 10,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "328a9106af1b9005",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/10"
+    },
+    "rounds": 3,
+    "strikes": 1,
+    "task": "bzip2/spec/huffman",
+    "v": 1
+  },
+  "task": "bzip2/spec/huffman"
+}
