@@ -1,0 +1,33 @@
+{
+  "at": 1794882100.7809193,
+  "lock_tip": "ba9cf46dedbdf957c5329a93a1a1dd15f2c4d355",
+  "status": {
+    "author": "imlvts/corey-opus",
+    "epoch": 2,
+    "last": {
+      "at": "2026-11-17T02:21:09Z",
+      "by": "admin",
+      "epoch": 2,
+      "merged_sha": "796c5a4b17db0daa24a9cac096978319e1df1e61",
+      "outcome": "accepted"
+    },
+    "lease": null,
+    "need": "done",
+    "pr": {
+      "branch": "task/bzip2/oracle/decompress/block-output/e1",
+      "draft": false,
+      "fetch": "git@github.com:autoformalize-everything/afe-oss.git",
+      "gh_user": "imlvts",
+      "head_sha": "796c5a4b17db0daa24a9cac096978319e1df1e61",
+      "number": 22,
+      "repo": "autoformalize-everything/afe-oss",
+      "spec": "3b2bcfbd75450505",
+      "url": "https://github.com/autoformalize-everything/afe-oss/pull/22"
+    },
+    "rounds": 0,
+    "strikes": 0,
+    "task": "bzip2/oracle/decompress/block-output",
+    "v": 1
+  },
+  "task": "bzip2/oracle/decompress/block-output"
+}
